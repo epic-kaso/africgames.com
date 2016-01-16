@@ -1,0 +1,19 @@
+{
+  "type": "application",
+  "username": "kasoprecede47",
+  "branch": "~1.4.0",
+  "module": "AppComponent",
+  "modules": [
+    "animate",
+    "resource",
+    "route",
+    "sanitize",
+    "touch"
+  ],
+  "transpilers": {
+    "views": "none",
+    "scripts": "none",
+    "styles": "none"
+  },
+  "locale": "en"
+}

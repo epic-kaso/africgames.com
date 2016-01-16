@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="en", ng-app="AppComponent">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>afric-games-com - Yet another amazing AngularJS application!</title>
+      <meta name="description" content="Yet another amazing AngularJS application!">
+      <!-- Sets initial viewport load and disables zooming  -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <!-- Set a shorter title for iOS devices when saved to home screen -->
+      <meta name="apple-mobile-web-app-title" content="afric-games-com">
+      <!-- Favicon -->
+      <link rel="icon" href="http://angularjs.org/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="http://angularjs.org/favicon.ico" type="image/x-icon">
+      <base href="/">
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+      <link href="css/bootstrap.css" rel="stylesheet"/>
+      <link href="css/main.css" rel="stylesheet"/>
+   </head>
+   <body>
+      <div class="container-fluid root-container">
+         <nav class="navbar navbar-default navbar-static-top navbar-top-level">
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <a href="/">
+                  <img class="navbar-brand" src="img/logo.png" alt="">
+                  </a>
+               </div>
+               <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Help</a></li>
+                  </ul>
+                  <div class="navbar-right">
+                      <button class="navbar-btn btn btn-primary">Upload Game</button>
+                  </div>
+                  <form class="navbar-form navbar-right">
+                     <input type="text" class="form-control" placeholder="Search...">
+                  </form>
+               </div>
+            </div>
+         </nav>
+         <nav class="navbar navbar-inverse navbar-static-top navbar-main-level">
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+               </div>
+               <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                     <li><a router-link="['/overview']">Dashboard</a></li>
+                     <li><a href="#">WAGE</a></li>
+                     <li><a href="#">Competition</a></li>
+                     <li><a href="#">News & Trend</a></li>
+                     <li><a href="#">Forum</a></li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <div class="content_holder">
+            <div class="sidebar sidebar-absolute">
+               <ul class="nav nav-sidebar card-content">
+                  <li><a href="/home/educational" >Educational
+                     </a>
+                  </li>
+                  <li ><a href="/home/racing-games" >
+                     Racing Games
+                     </a>
+                  </li>
+                  <li ><a href="/home/strategy" >
+                     Strategy
+                     </a>
+                  </li>
+                  <li ><a href="/home/sports" >
+                     Sports
+                     </a>
+                  </li>
+                  <li ><a href="/home/arcade" >
+                     Arcade
+                     </a>
+                  </li>
+                  <li ><a href="/home/puzzle" >
+                     Puzzle
+                     </a>
+                  </li>
+                  <li ><a href="/home/action" >
+                     Action
+                     </a>
+                  </li>
+                  <li ><a href="/home/adventure" >
+                     Adventure
+                     </a>
+                  </li>
+                  <li ><a href="/home/role-playing" >
+                     Role Playing
+                     </a>
+                  </li>
+                  <li ><a href="/home/trivia" >
+                     Trivia
+                     </a>
+                  </li>
+                  <li ><a href="/home/simulation" >
+                     Simulation
+                     </a>
+                  </li>
+                  <li><a href="/home/shooter" >
+                     Shooter
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="main_content">
+
+                 <!-- Half Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+
+               <div class="cluster">
+                  <div class="cluster-heading">
+                     <h2 class="single-title-link"> 
+                        <a class="title-link id-track-click"
+                           href="#">
+                        Featured Games</a> 
+                        <span>  <a class="see-more btn btn-success" 
+                           href="#" style="display: inline;">See more</a>   
+                        </span> 
+                     </h2>
+                  </div>
+                  <div class="cluster-content">
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="cluster">
+                  <div class="cluster-heading">
+                     <h2 class="single-title-link"> 
+                        <a class="title-link id-track-click"
+                           href="#">
+                        New + Updated Games</a> 
+                        <span>  <a class="see-more btn btn-success" 
+                           href="#" style="display: inline;">See more</a>   
+                        </span> 
+                     </h2>
+                  </div>
+                  <div class="cluster-content">
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card no-rationale square-cover apps small">
+                        <div class="card-content">
+                           <a class="card-click-target" href="#" 
+                              aria-hidden="true" tabindex="-1"></a> 
+                           <div class="cover">
+                              <div class="cover-image-container">
+                                 <div class="cover-outer-align">
+                                    <div class="cover-inner-align"> 
+                                       <img alt="BINGO Blitz - FREE Bingo+Slots" class="cover-image"  
+                                          src="img/app.webp" aria-hidden="true"> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <a class="card-click-target" href="#" 
+                                 >  
+                              <span class="movies preordered-overlay-container id-preordered-overlay-container" style="display:none"> 
+                              <span class="preordered-label">Pre-ordered</span> </span> 
+                              <span class="preview-overlay-container" data-docid="air.com.buffalo_studios.newflashbingo">  </span>  </a>  
+                           </div>
+                           <div class="details">
+                              <a class="card-click-target" href="#" 
+                                 aria-hidden="true" tabindex="-1">
+                              </a>  
+                              <a class="title" href="#" ></span> 
+                              </a>   
+                              <div class="subtitle-container">
+                                 <a class="subtitle" href="/store/apps/developer?id=Playtika+Santa+Monica" >Playtika Santa Monica</a>   
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link"
+                                          >    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </div>
+                              <div class="description">  Play the #1 online Bingo franchise.  Fast-paced action, power-ups &amp; more! <span class="paragraph-end"></span> <a class="card-click-target" href="#" aria-hidden="true" tabindex="-1"></a>  </div>
+                           </div>
+                           <div class="reason-set">
+                              <span class="stars-container">
+                                 <a href="#">
+                                    <div class="reason-set-star-rating">
+                                       <div class="tiny-star star-rating-non-editable-container" aria-label="Rated 4.4 stars out of five stars">
+                                          <div class="current-rating" jsname="jIIjq" style="width: 87.53223419189453%;"></div>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <span class="price-container">
+                                    <span class="paragraph-end"></span>   
+                                    <span class="apps is-price-tag buy-button-container" data-doc-fetch-skip-cache="0" data-doc-fetch-vouchers="0" data-docid="air.com.buffalo_studios.newflashbingo">
+                                       <div class="pon" style="display:none">1</div>
+                                       <button class="price buy btn btn-link">    
+                                       <span class="display-price">Free</span>   </button>    
+                                    </span>
+                                 </span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+      <script type="text/javascript">
+         $(function(){
+            // $('.content_holder').scroll(function(evt){
+            //    console.log(evt);
+            // });
+
+            // $(window).scroll(function (event) {
+            //     var scroll = $(window).scrollTop();
+            //     // Do 
+            //     console.log(scroll);
+            // });
+
+            var  mn = $(".navbar.navbar-main-level");
+                 mns = "navbar-fixed-top";
+                 hdr = $('.navbar.navbar-top-level').height();
+                 sidebar = $('.sidebar');
+
+               $(window).scroll(function() {
+                 if( $(this).scrollTop() > hdr ) {
+                   mn.addClass(mns);
+                   mn.removeClass('navbar-static-top');
+
+                   sidebar.addClass('sidebar-fixed');
+                   sidebar.removeClass('sidebar-absolute');
+
+                 } else {
+                   mn.removeClass(mns);
+                   mn.addClass('navbar-static-top');
+
+                   sidebar.removeClass('sidebar-fixed');
+                   sidebar.addClass('sidebar-absolute');
+                 }
+
+               });
+
+         });
+      </script>
+   </body>
+</html>
