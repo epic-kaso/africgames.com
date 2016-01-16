@@ -100,11 +100,11 @@ img.navbar-brand {
 }
 
 .card .cover-image-container {
-    height: 110%;
-    left: -5%;
+    height: 100%;
+    left: 0;
     position: relative;
-    top: -5%;
-    width: 110%;
+    top: 0;
+    width: 100%;
 }
 
 .card.small .details {
@@ -136,7 +136,7 @@ img.navbar-brand {
 }
 
 .card.tiny.apps.square-cover .cover-image, .card.small.apps.square-cover .cover-image, .card.medium.apps.square-cover .cover-image, .card.medium-long.apps.square-cover .cover-image, .card.medium-minus.apps.square-cover .cover-image, .card.medium-plus.apps.square-cover .cover-image, .card.medium-plus-fixed.apps.square-cover .cover-image, .card.marge.apps.square-cover .cover-image, .card.large.apps.square-cover .cover-image {
-    max-width: 73%;
+    /* max-width: 73%; */
 }
 .card.small.circle-cover .cover-image, .card.small.square-cover .cover-image {
     max-height: 160px;
@@ -156,7 +156,7 @@ img.navbar-brand {
 .card .cover-outer-align {
     display: table;
     height: 100%;
-    width: 100%;
+    width: 73%;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
@@ -232,4 +232,67 @@ ul.nav.navbar-nav {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+@media (max-width: 768px){
+    .sidebar{
+        left: -250px;
+        transition: all 0.2s;
+        z-index: 9000;
+    }
+
+    .sidebar.shown{
+        left: -15px;        
+    }
+
+    .main_content {
+        margin-left: 0px;
+        width: auto;
+        padding-top: 23px;
+    }
+
+    .card{
+        display: inline-block;
+    }
+    .card.small.square-cover {
+        height: 245px;
+        width: 140px;
+    }
+
+    .card.small.square-cover .cover{
+        width: 140px;
+        height: 140px;
+    }
+
+    .card.small.circle-cover .cover-image, .card.small.square-cover .cover-image{
+        max-width: 140px;
+        max-height: 140px;
+    }
+
+    h2.single-title-link {
+    font-weight: 300;
+    font-size: 16px;
+    }
+
+    .see-more{
+        padding: 4px; 
+    }
+
+    .cluster-content{
+        display: block;
+    }
+
+    .navbar-main-level .collapse.in {
+        display: block;
+        background-color: #2196f3;
+        max-height: 200px;
+        height: 200px;
+    }
+}
+
+button.visible-xs.pull-left.toggle-sidebar {
+    background-color: transparent;
+    border: none;
+    margin-top: 5px;
+    padding: 10px;
 }

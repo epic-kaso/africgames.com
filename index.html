@@ -17,25 +17,26 @@
       <link rel="shortcut icon" href="http://angularjs.org/favicon.ico" type="image/x-icon">
       <base href="/">
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-      <link href="http://kasoprecede47.github.io/africgames.com/css/bootstrap.css" rel="stylesheet"/>
-      <link href="http://kasoprecede47.github.io/africgames.com/css/main.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link href="css/bootstrap.css" rel="stylesheet"/>
+      <link href="css/main.css" rel="stylesheet"/>
    </head>
    <body>
       <div class="container-fluid root-container">
          <nav class="navbar navbar-default navbar-static-top navbar-top-level">
             <div class="container-fluid">
                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top" aria-expanded="false" aria-controls="navbar">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   </button>
                   <a href="/">
-                  <img class="navbar-brand" src="http://kasoprecede47.github.io/africgames.com/img/logo.png" alt="">
+                  <img class="navbar-brand" src="img/logo.png" alt="">
                   </a>
                </div>
-               <div id="navbar" class="navbar-collapse collapse">
+               <div id="navbar-top" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Help</a></li>
@@ -52,14 +53,19 @@
          <nav class="navbar navbar-inverse navbar-static-top navbar-main-level">
             <div class="container-fluid">
                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                  <button type="button" class="navbar-toggle visible-xs pull-left toggle-sidebar">
+                     <span class="fa fa-ellipsis-v fa-2x"></span>
+                  </button>
+
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false" aria-controls="navbar">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   </button>
                </div>
-               <div id="navbar" class="navbar-collapse collapse">
+               <div id="navbar-main" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
                      <li><a router-link="['/overview']">Dashboard</a></li>
                      <li><a href="#">WAGE</a></li>
@@ -952,6 +958,19 @@
                    sidebar.removeClass('sidebar-fixed');
                    sidebar.addClass('sidebar-absolute');
                  }
+
+               });
+
+               var sidebar = $('.sidebar');
+
+               $('button.toggle-sidebar').click(function(evt){
+                  evt.preventDefault();
+
+                  if(sidebar.hasClass('shown')){
+                       sidebar.removeClass('shown');
+                  }else{
+                      sidebar.addClass('shown');
+                  }
 
                });
 
